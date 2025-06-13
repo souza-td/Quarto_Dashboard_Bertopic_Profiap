@@ -1,0 +1,4 @@
+- source: dashboard.qmd
+  quarto-pub:
+    - id: 3aefdfbc-2564-4f47-86ec-84de815afa62
+      url: https://thiago-dsouza.quarto.pub/descoberta-de-tópicos-do-mestrado-profissional-em-administração-pública-(profiap

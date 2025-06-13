@@ -1,0 +1,134 @@
+---
+title: "Descoberta de Tópicos do Mestrado Profissional em Administração Pública (PROFIAP)"
+author: "Thiago Duarte de Souza"
+format:
+  dashboard:
+    theme: cosmo
+    nav-buttons:
+      - icon: github
+        href: https://gitlab.com/
+resources:
+  - datamap_profiap.html
+  - barchart_profiap.html
+  - topics_over_time.html
+  - references.bib
+editor: visual
+jupyter: python3
+freeze: auto
+bibliography: references.bib
+csl: ieee.csl
+---
+
+# DataMapPlot {orientation="columns" scrolling="true"}
+
+## Intro {width="20%"}
+
+### Visão-geral
+
+**Visão geral**
+
+-   **1 258** resumos de dissertações (2015 – 2023)
+-   Aplicação de descoberta de tópicos utilizando **BERTopic**.
+-   Identificados **16 tópicos** correspondendo a **72 %** do corpus.
+
+### Como usar o gráfico
+
+**Como explorar o gráfico**
+
+-   **Duplo Clique** → Dá zoom em uma área (segure Ctrl enquanto dá dúplo clique para zoom-out)
+-   **Tamanho da fonte** → indica a quantidade de documentos no tópico.\
+-   **Passe o mouse** sobre qualquer ponto → exibe o resumo correspondente.\
+-   **Campo de busca** → filtra e destaca apenas os documentos que contêm o termo.\
+-   **Proximidade dos pontos** → NÃO é distância temática direta; observe a **densidade** para indícios de similaridade.
+
+### Saiba mais
+
+**Saiba mais**
+
+-   ▶️ **Termos mais relevantes por tópico**
+-   ▶️ **Distribuição temporal dos tópicos**
+-   ▶️ **Metodologia completa**
+
+## Mapa Interativo {.fill width="80%"}
+
+<iframe src="datamap_profiap.html" width="95%%" height="100%" style="border: none;">
+
+</iframe>
+
+# Tabela de Tópicos {.fill orientation="rows" scrolling="true"}
+
+```{python}
+import pandas as pd
+from itables import show
+
+df = pd.read_csv("topic_info.csv")
+df = df[["Topic","Count", "Name","KeyBERT","MMR"]]
+show(
+    df,
+    scrollY   = "70vh", 
+    dom="Blfrtip",
+    )
+```
+
+# Termos mais relevantes {.fill orientation="columns"}
+
+##  {width="20%"}
+
+**Termos mais relevantes por tópico**
+
+-   Os valores são o cTF-IDF para cada termo no respectivo tópico.
+-   Algumas palavras podem aparecer diferentes da gráfia usual devido ao processo de lematização utilizado durante o pré-processamento dos textos.
+
+##  {width="80%"}
+
+<iframe src="barchart_profiap.html" width="100%" height=90% style="border: none;">
+
+</iframe>
+
+# Distribuição temporal {.fill} 
+
+<iframe src="topics_over_time.html"
+        width="80%"
+        height="100%"          
+        style="border: none;"></iframe>
+
+# Metodologia  {.fill} 
+
+**METODOLOGIA**
+
+Todos os procedimentos foram implementados em Python 3.10 e executados em um computador com processador Intel i5 (13ª geração), 16 GB RAM e placa NVIDIA RTX 3050. O código-fonte e todos os artefatos de reprodutibilidade estão disponíveis em https://github.com/souza-td/Profiap_abstracts_BERTopic_modeling. Para garantir resultados determinísticos, o gerador pseudo-aleatório foi fixado em seed = 42.
+
+**Construção do corpus**
+
+Recuperamos, pela interface de dados abertos da Plataforma Sucupira/CAPES, todas as dissertações do PROFIAP desde a criação do programa (2014) até o último conjunto de dados disponível (2023) [@capesDAV2025]. Os arquivos CSV exportados foram concatenados em um único DataFrame Pandas e filtrados pelo identificador exclusivo do PROFIAP. Embora o período de coleta comece em 2014, não houve defesas naquele ano; os resumos finais abrangem 2015 – 2023. Após a remoção de dois duplicatas exatos, obtivemos 1 258 registros únicos, salvos em CSV para as etapas seguintes. Por se tratarem de dados públicos, não foi necessária aprovação ética adicional.
+
+**Pré-processamento de texto e geração de embeddings**
+
+Para capturar nuances sintático-léxicas geramos embeddings densos com paraphrase-multilingual-MiniLM-L12-v2[@reimers-2019-sentence-bert] e ibm-granite/granite-embedding-278m-multilingual[@ibm_granite_embedding_278m_multilingual_2024]. Paralelamente, construímos uma matriz termo-documento esparsa via CountVectorizer configurada para uni- e bigramas (ngram_range = (1, 2)). Termos presentes em mais de 90 % dos documentos foram eliminados (max_df = 0.9) para reduzir ruído sem descartar vocabulário especializado.
+
+A tokenização e lematização utilizaram o modelo português do SpaCy, com parser sintático e NER desativados. A lista padrão de stopwords foi ampliada com termos de alta frequência no domínio (por exemplo, gestão, público, resultado) e siglas de universidades participantes (UFJF, UFPE, etc.).
+
+**Definição de Hiperparâmetros**
+
+Os embeddings foram projetados em um espaço de cinco dimensões via UMAP. Testes preliminares mostraram que valores elevados de n_neighbors comprimiam tópicos distintos em agrupamentos muito amplos; assim, partimos de n_neighbors = 3, n_components = 5 e min_dist = 0.1, parâmetros que privilegiam a estrutura local.
+
+A calibração dos hiperparâmetros do BERTopic começou pela orientação da própria biblioteca, que atribui ao min_cluster_size (ou min_topic_size) o papel de principal regulador da HDBSCAN, determinando simultaneamente o número e a granularidade dos tópicos. Esse protagonismo foi corroborado pelos resultados de Yan e Zhang, que identificaram correlação monotônica forte entre o coeficiente de silhueta dos clusters e a coerência temática (c_v) e recomendaram maximizar essa coerência ajustando apenas o min_cluster_size [@yan2023optimized] [@grootendorst2025bertopic].
+
+Com base nessas evidências, empregamos um procedimento em duas fases. Na exploração inicial, variamos n_neighbors de 3 a 13 (passo 2) e min_cluster_size de 10 a 50 (passo 5). Essa varredura revelou que valores de min_cluster_size iguais ou superiores a 25 reduziam o corpus a apenas dois tópicos—um resultado incompatível com a heterogeneidade esperada. Na fase de refinamento concentramos o intervalo em n_neighbors de 3 a 14 e min_cluster_size de 10 a 24, usando passo 1.
+
+Para cada combinação executamos o pipeline completo e calculamos c_v, c_npmi, u_mass e diversity em dois espaços de embeddings: o modelo multilíngue paraphrase-MiniLM recomendado na documentação e o ibm-granite. Selecionamos apenas modelos que gerassem pelo menos cinco tópicos (em consonância com a variabilidade temática indicada por [@de2024analise]), que tivessem c_v no quartil superior e apresentassem diversity \> 0.9; apenas as configurações com embeddings ibm-granite satisfizeram simultaneamente essas exigências, conforme exemplificado em \table{}. Entre os quatro finalistas, escolhemos a configuração n_neighbors = 12 e min_cluster_size = 13, que ofereceu o melhor equilíbrio entre diversidade temática e coerência semântica, evitando a concentração excessiva de documentos observada nas demais alternativas. A inspeção qualitativa dos termos-chave e dos três documentos mais representativos de cada tópico confirmou a pertinência desse modelo, que embasa as análises das próximas seções.
+
+**Representação dos tópicos**
+
+Foram utilizados dois modelos para as representações finais de tópico o KeyBERT-Inspired, padrão da biblioteca e o Maximal Marginal Relevance (coeficiente de diversidade = 0,3).
+
+**Visualização de dados e divulgação científica**
+
+As visualizações gráficas resultantes da modelagem foram geradas utilizando as funcionalidade já presentes na biblioteca Bertopic. Estas foram posteriormente exportadas em formato html e inseridas neste Dashboard, construído utilizando a ferramenta Quarto markdown [@quarto_dashboard_options_2025]. O arquivo código e demais recursos utilizados na construção deste Dashboard estão também disponíveis no repositório do projeto.
+
+# Referências {.fill} 
+
+**Referências**
+
+::: {#refs}
+:::

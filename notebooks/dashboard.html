@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Thiago Duarte de Souza">
+
+<title>Descoberta de Tópicos do Mestrado Profissional em Administração Pública (PROFIAP)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="dashboard_files/libs/clipboard/clipboard.min.js"></script>
+<script src="dashboard_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="dashboard_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="dashboard_files/libs/quarto-html/popper.min.js"></script>
+<script src="dashboard_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="dashboard_files/libs/quarto-html/anchor.min.js"></script>
+<link href="dashboard_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="dashboard_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="dashboard_files/libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="dashboard_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="dashboard_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="dashboard_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="dashboard_files/libs/bootstrap/bootstrap-8cdc23add56cd67de6ad6da639645a3b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="dashboard_files/libs/bootstrap/bootstrap-dark-8cdc23add56cd67de6ad6da639645a3b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="dashboard_files/libs/bootstrap/bootstrap-8cdc23add56cd67de6ad6da639645a3b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="dashboard_files/libs/quarto-dashboard/quarto-dashboard.js"></script>
+<script src="dashboard_files/libs/quarto-dashboard/stickythead.js"></script>
+
+
+
+<script src="dashboard_files/libs/quarto-dashboard/web-components.js" type="module"></script>
+<script src="dashboard_files/libs/quarto-dashboard/components.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="quarto-dashboard dashboard-fill fullcontent quarto-light">
+
+<header id="quarto-dashboard-header">
+<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
+  <div class="navbar-container container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+
+
+    <div class="navbar-brand-container">       
+
+      <div class="navbar-title">
+        <div class="navbar-title-text"><a href="#">Descoberta de Tópicos do Mestrado Profissional em Administração Pública (PROFIAP)</a></div>
+        
+        <div class="navbar-author">Thiago Duarte de Souza</div>
+      </div>
+    </div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-datamapplot" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#datamapplot" data-scrolling="true" href="#datamapplot" aria-controls="datamapplot" aria-selected="true"><span class="nav-link-text">DataMapPlot</span></a></li><li class="nav-item" role="presentation"><a id="tab-tabela-de-tópicos" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#tabela-de-tópicos" data-scrolling="true" href="#tabela-de-tópicos" aria-controls="tabela-de-tópicos" aria-selected="false"><span class="nav-link-text">Tabela de Tópicos</span></a></li><li class="nav-item" role="presentation"><a id="tab-termos-mais-relevantes" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#termos-mais-relevantes" data-scrolling="false" href="#termos-mais-relevantes" aria-controls="termos-mais-relevantes" aria-selected="false"><span class="nav-link-text">Termos mais relevantes</span></a></li><li class="nav-item" role="presentation"><a id="tab-distribuição-temporal" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#distribuição-temporal" data-scrolling="false" href="#distribuição-temporal" aria-controls="distribuição-temporal" aria-selected="false"><span class="nav-link-text">Distribuição temporal</span></a></li><li class="nav-item" role="presentation"><a id="tab-metodologia" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#metodologia" data-scrolling="false" href="#metodologia" aria-controls="metodologia" aria-selected="false"><span class="nav-link-text">Metodologia</span></a></li><li class="nav-item" role="presentation"><a id="tab-referências" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#referências" data-scrolling="false" href="#referências" aria-controls="referências" aria-selected="false"><span class="nav-link-text">Referências</span></a></li></ul><div class="quarto-dashboard-links"><a class="quarto-dashboard-link" href="https://gitlab.com/"><i class="bi bi-github"></i></a></div></div></div>
+</nav>
+</header>
+<div class="page-layout-custom quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill quarto-dashboard-pages">  
+
+<div class="bslib-grid-item html-fill-item tab-content bslib-grid" data-layout="fill" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div id="datamapplot" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-scrolling="true" data-orientation="columns" aria-labelledby="tab-datamapplot">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 20fr) minmax(3em, 80fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content) minmax(3em, max-content) minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<strong>Visão geral</strong>
+<ul>
+<li><strong>1 258</strong> resumos de dissertações (2015 – 2023)</li>
+<li>Aplicação de descoberta de tópicos utilizando <strong>BERTopic</strong>.</li>
+<li>Identificados <strong>16 tópicos</strong> correspondendo a <strong>72 %</strong> do corpus.</li>
+</ul>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<strong>Como explorar o gráfico</strong>
+<ul>
+<li><strong>Duplo Clique</strong> → Dá zoom em uma área (segure Ctrl enquanto dá dúplo clique para zoom-out)</li>
+<li><strong>Tamanho da fonte</strong> → indica a quantidade de documentos no tópico.<br>
+</li>
+<li><strong>Passe o mouse</strong> sobre qualquer ponto → exibe o resumo correspondente.<br>
+</li>
+<li><strong>Campo de busca</strong> → filtra e destaca apenas os documentos que contêm o termo.<br>
+</li>
+<li><strong>Proximidade dos pontos</strong> → NÃO é distância temática direta; observe a <strong>densidade</strong> para indícios de similaridade.</li>
+</ul>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<strong>Saiba mais</strong>
+<ul>
+<li>▶️ <strong>Termos mais relevantes por tópico</strong></li>
+<li>▶️ <strong>Distribuição temporal dos tópicos</strong></li>
+<li>▶️ <strong>Metodologia completa</strong></li>
+</ul>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div><div class="fill html-fill-item html-fill-container bslib-grid" data-layout="fill" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<iframe src="datamap_profiap.html" width="95%%" height="100%" style="border: none;">
+</iframe>
+</div>
+</div>
+</div>
+<div id="tabela-de-tópicos" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-scrolling="true" data-orientation="rows" aria-labelledby="tab-tabela-de-tópicos">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<!--| quarto-html-table-processing: none -->
+<table id="itables_988d2ddd_a0e3_436c_bb14_5dd00414e805"><tbody><tr>
+    <td style="vertical-align:middle; text-align:left">
+    <a href="https://mwouts.github.io/itables/"><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="64" viewbox="0 0 500 400" style="font-family: 'Droid Sans', sans-serif;">
+    <g style="fill:#d9d7fc">
+        <path d="M100,400H500V357H100Z"></path>
+        <path d="M100,300H400V257H100Z"></path>
+        <path d="M0,200H400V157H0Z"></path>
+        <path d="M100,100H500V57H100Z"></path>
+        <path d="M100,350H500V307H100Z"></path>
+        <path d="M100,250H400V207H100Z"></path>
+        <path d="M0,150H400V107H0Z"></path>
+        <path d="M100,50H500V7H100Z"></path>
+    </g>
+    <g style="fill:#1a1366;stroke:#1a1366;">
+   <rect x="100" y="7" width="400" height="43">
+    <animate attributename="width" values="0;400;0" dur="5s" repeatcount="indefinite"></animate>
+      <animate attributename="x" values="100;100;500" dur="5s" repeatcount="indefinite"></animate>
+  </rect>
+        <rect x="0" y="107" width="400" height="43">
+    <animate attributename="width" values="0;400;0" dur="3.5s" repeatcount="indefinite"></animate>
+    <animate attributename="x" values="0;0;400" dur="3.5s" repeatcount="indefinite"></animate>
+  </rect>
+        <rect x="100" y="207" width="300" height="43">
+    <animate attributename="width" values="0;300;0" dur="3s" repeatcount="indefinite"></animate>
+    <animate attributename="x" values="100;100;400" dur="3s" repeatcount="indefinite"></animate>
+  </rect>
+        <rect x="100" y="307" width="400" height="43">
+    <animate attributename="width" values="0;400;0" dur="4s" repeatcount="indefinite"></animate>
+      <animate attributename="x" values="100;100;500" dur="4s" repeatcount="indefinite"></animate>
+  </rect>
+        <g style="fill:transparent;stroke-width:8; stroke-linejoin:round" rx="5">
+            <g transform="translate(45 50) rotate(-45)">
+                <circle r="33" cx="0" cy="0"></circle>
+                <rect x="-8" y="32" width="16" height="30"></rect>
+            </g>
+
+            <g transform="translate(450 152)">
+                <polyline points="-15,-20 -35,-20 -35,40 25,40 25,20"></polyline>
+                <rect x="-15" y="-40" width="60" height="60"></rect>
+            </g>
+
+            <g transform="translate(50 352)">
+                <polygon points="-35,-5 0,-40 35,-5"></polygon>
+                <polygon points="-35,10 0,45 35,10"></polygon>
+            </g>
+
+            <g transform="translate(75 250)">
+                <polyline points="-30,30 -60,0 -30,-30"></polyline>
+                <polyline points="0,30 -30,0 0,-30"></polyline>
+            </g>
+
+            <g transform="translate(425 250) rotate(180)">
+                <polyline points="-30,30 -60,0 -30,-30"></polyline>
+                <polyline points="0,30 -30,0 0,-30"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
+</a>
+    Loading ITables v2.4.2 from the internet...
+    (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
+    </tr></tbody></table>
+<link href="https://www.unpkg.com/dt_for_itables@2.3.3/dt_bundle.css" rel="stylesheet">
+<script type="module">
+    import { ITable, jQuery as $ } from 'https://www.unpkg.com/dt_for_itables@2.3.3/dt_bundle.js';
+
+    document.querySelectorAll("#itables_988d2ddd_a0e3_436c_bb14_5dd00414e805:not(.dataTable)").forEach(table => {
+        if (!(table instanceof HTMLTableElement))
+            return;
+
+        let dt_args = {"scrollY": "70vh", "dom": "Blfrtip", "layout": {"topStart": "buttons", "topEnd": "search", "bottomStart": "info", "bottomEnd": "paging"}, "order": [], "text_in_header_can_be_selected": true, "ordering": true, "buttons": [], "keys": true, "language": {"info": "Showing _TOTAL_ entries"}, "classes": ["display", "nowrap", "compact"], "responsive": true, "paging": false, "searching": true, "info": true, "lengthChange": false, "autoWidth": false, "style": {"table-layout": "auto", "width": "auto", "margin": "auto", "caption-side": "bottom"}, "table_html": "<table><thead>\n    <tr style=\"text-align: right;\">\n      \n      <th>Topic</th>\n      <th>Count</th>\n      <th>Name</th>\n      <th>KeyBERT</th>\n      <th>MMR</th>\n    </tr>\n  </thead></table>", "data_json": "[[-1, 344, \"-1_comunica\\u00e7\\u00e3o_munic\\u00edpio_projeto_qualidade\", \"['governamental', 'governo', 'accountability', 'or\\u00e7ament\\u00e1rio', 'gerenciamento', 'fiscal', 'presta\\u00e7\\u00e3o', 'or\\u00e7amento', 'municipal', 'nacional']\", \"['comunica\\u00e7\\u00e3o', 'munic\\u00edpio', 'projeto', 'qualidade', 'avalia\\u00e7\\u00e3o', 'efici\\u00eancia', 'governo', 'capacidade', 'nacional', 'quantitativo']\"], [0, 315, \"0_compet\\u00eancia_avalia\\u00e7\\u00e3o_planejamento_curso\", \"['universit\\u00e1rio', 'avalia\\u00e7\\u00e3o', 'gradua\\u00e7\\u00e3o', 'presta\\u00e7\\u00e3o', 'atua\\u00e7\\u00e3o', 'campus', 'estudantil', 'gerenciamento', 'est\\u00e1gio', 'projeto']\", \"['compet\\u00eancia', 'avalia\\u00e7\\u00e3o', 'capacita\\u00e7\\u00e3o', 'gerencial', 'docente', 'pr\\u00e1tica', 'fun\\u00e7\\u00e3o', 'campus', 'universit\\u00e1rio', 'atua\\u00e7\\u00e3o']\"], [1, 118, \"1_sustent\\u00e1vel_ambiental_sustentabilidade_res\\u00edduo\", \"['sustentabilidade', 'sustent\\u00e1vel', 'ambiental', 'socioambiental', 'res\\u00edduo', 'verde', 'universit\\u00e1rio', 'vigente', 'recicl\\u00e1vel', 'campus']\", \"['sustent\\u00e1vel', 'ambiental', 'sustentabilidade', 'res\\u00edduo', 'consumo', 'socioambiental', 'ufms', 'projeto', 'campus', 'gerar']\"], [2, 68, \"2_efici\\u00eancia_munic\\u00edpio_financeiro_or\\u00e7ament\\u00e1rio\", \"['efici\\u00eancia', 'efic\\u00e1cia', 'or\\u00e7amento', 'despesa', 'or\\u00e7ament\\u00e1rio', 'gasto', 'gastos', 'econ\\u00f4mico', 'custo', 'econom\\u00e9trico']\", \"['efici\\u00eancia', 'fiscal', 'gasto', 'or\\u00e7amento', 'custo', '\\u00edndice', 'ife', 'ufpi', 'despesa', 'escolar']\"], [3, 65, \"3_participativo_municipal_democr\\u00e1tico_democracia\", \"['institucionaliza\\u00e7\\u00e3o', 'governan\\u00e7a', 'participativo', 'redemocratiza\\u00e7\\u00e3o', 'democr\\u00e1tico', 'democratiza\\u00e7\\u00e3o', 'democracia', 'universit\\u00e1rio', 'governo', 'voluntariar']\", \"['participativo', 'municipal', 'democr\\u00e1tico', 'constitui\\u00e7\\u00e3o', 'membro', 'cidad\\u00e3o', 'comunidade', 'auditorio', 'deliberativo', 'normativo']\"], [4, 63, \"4_sa\\u00fade_satisfa\\u00e7\\u00e3o_comprometimento_qualidade\", \"['laboral', 'ocupacional', 'exame', 'funcion\\u00e1rio', 'campus', 'qualidade', 'sa\\u00fade', 'motivacional', 'trabalhar', 'avalia\\u00e7\\u00e3o']\", \"['sa\\u00fade', 'satisfa\\u00e7\\u00e3o', 'qualidade', 'dimens\\u00e3o', 'afetivo', 'funcion\\u00e1rio', 'laboral', 'pessoal', 'humaniza\\u00e7\\u00e3o', 'quantitativo']\"], [5, 55, \"5_compra_licita\\u00e7\\u00e3o_contrata\\u00e7\\u00e3o_aquisi\\u00e7\\u00e3o\", \"['compra', 'licita\\u00e7\\u00e3o', 'aquisi\\u00e7\\u00e3o', 'licitat\\u00f3rio', 'licitar', 'tramita\\u00e7\\u00e3o', 'governamental', 'governan\\u00e7ar', 'licitante', 'comprador']\", \"['licita\\u00e7\\u00e3o', 'contrata\\u00e7\\u00e3o', 'aquisi\\u00e7\\u00e3o', 'licitat\\u00f3rio', 'obra', 'fornecedor', 'contrato', 'contratual', 'certame', 'garantir']\"], [6, 42, \"6_teletrabalho_remoto_pandemia_produtividade\", \"['teletrabalho', 'teletrabalhador', 'laboral', 'trabalhar', 'remoto', 'presencial', 'remotamente', 'office', 'tecnologio', 'tecnologia']\", \"['teletrabalho', 'remoto', 'pandemia', 'presencial', 'laboral', 'vantagem', 'mental', 'teletrabalhador', 'comunica\\u00e7\\u00e3o', 'tecnol\\u00f3gico']\"], [7, 30, \"7_contrato_terceiriza\\u00e7\\u00e3o_fiscaliza\\u00e7\\u00e3o_terceirizar\", \"['fiscaliza\\u00e7\\u00e3o', 'fiscalizar', 'burocr\\u00e1tico', 'fiscal', 'contratual', 'contratar', 'terceiriza\\u00e7\\u00e3o', 'privatiza\\u00e7\\u00e3o', 'contratante', 'contrato']\", \"['contrato', 'terceiriza\\u00e7\\u00e3o', 'fiscal', 'contrata\\u00e7\\u00e3o', 'contratual', 'empresa', 'legisla\\u00e7\\u00e3o', 'contratar', 'contratante', 'interesse']\"], [8, 27, \"8_inova\\u00e7\\u00e3o_tecnol\\u00f3gico_patente_tecnologia\", \"['inova\\u00e7\\u00e3o', 'inovador', 'inova', 'inovadoro', 'inven\\u00e7\\u00e3o', 'inovativo', 'patente', 'iniciativo', 'inovar', 'tecnol\\u00f3gico']\", \"['inova\\u00e7\\u00e3o', 'tecnol\\u00f3gico', 'patente', 'empresa', 'impacto', 'intelectual', 'transfer\\u00eancia', 'inova', 'investimento', 'internacional']\"], [9, 24, \"9_viol\\u00eancia_policial_homic\\u00eddio_mulher\", \"['viol\\u00eancia', 'homic\\u00eddio', 'v\\u00edtima', 'violento', 'crime', 'criminalidade', 'agress\\u00e3o', 'paraibano', 'investiga\\u00e7\\u00e3o', 'para\\u00edba']\", \"['viol\\u00eancia', 'homic\\u00eddio', 'seguran\\u00e7a', 'acidente', 'pol\\u00edcia', 'prisional', 'v\\u00edtima', 'violento', 'criminalidade', 'viol\\u00eancio']\"], [10, 23, \"10_transpar\\u00eancia_portal_transpar\\u00eanciar_acesso\", \"['transpar\\u00eancia', 'transpar\\u00eanciar', 'transparente', 'divulga\\u00e7\\u00e3o', 'divulgar', 'governamental', 'accountability', 'disponibiliza\\u00e7\\u00e3o', 'publicar', 'disponibilizar']\", \"['transpar\\u00eancia', 'portal', 'transpar\\u00eanciar', 'transparente', 'divulga\\u00e7\\u00e3o', 'disponibilizar', 'normativo', 'virtual', 'ufmt', 'democracia']\"], [11, 20, \"11_digital_governo_transforma\\u00e7\\u00e3o_tecnologia\", \"['digital', 'governamental', 'governan\\u00e7a', 'governan\\u00e7ar', 'governo', 'tecnologia', 'democr\\u00e1tico', 'transforma\\u00e7\\u00e3o', 'tecnol\\u00f3gico', 'tecnologio']\", \"['digital', 'tecnologia', 'facebook', 'governamental', 'postagem', 'plataforma', 'website', 'democracia', 'transpar\\u00eanciar', 'm\\u00eddia']\"], [12, 17, \"12_compartilhamento_convers\\u00e3o_aprendizagem_pr\\u00e1tica\", \"['corporativo', 'internaliza\\u00e7\\u00e3o', 'institucionaliza\\u00e7\\u00e3o', 'corpora\\u00e7\\u00e3o', 'enfoque', 'pr\\u00e1ticas', 'aprendizagem', 'pr\\u00e1tica', 'compartilhamento', 'internaliza\\u00e7\\u00e3or']\", \"['compartilhamento', 'convers\\u00e3o', 'aprendizagem', 'pr\\u00e1tica', 'internaliza\\u00e7\\u00e3o', 'iagcap', 'facilitador', 'sucesso', 'cbmal', 'autora']\"], [13, 17, \"13_mulher_g\\u00eanero_representa\\u00e7\\u00e3o_trans\", \"['g\\u00eanero', 'sexual', 'feminino', 'transg\\u00eanero', 'sexualidade', 'diversidade', 'racial', 'entrevisto', 'mulher', 'universit\\u00e1rio']\", \"['g\\u00eanero', 'representa\\u00e7\\u00e3o', 'negro', 'racial', 'comiss\\u00e3o', 'heteroidentifica\\u00e7\\u00e3o', 'feminino', 'cbmmg', 'diversidade', 'reconhecimento']\"], [14, 16, \"14_mapeamento_process_execu\\u00e7\\u00e3o_scdp\", \"['process', 'gerenciamento', 'management', 'benchmarking', 'ger\\u00eancia', 'documentar', 'ger\\u00eanciar', 'business', 'presta\\u00e7\\u00e3o', 'agilidader']\", \"['mapeamento', 'process', 'scdp', 'melhorio', 'gerenciamento', 'modelagem', 'manual', 'redesenho', 'bpmn', 'mapear']\"], [15, 14, \"15_evas\\u00e3o_curso_evadir_aluno\", \"['evas\\u00e3o', 'evadir', 'universit\\u00e1rio', 'gradua\\u00e7\\u00e3o', 'evadido', 'educacional', 'estudantil', 'semestre', 'estudante', 'campus']\", \"['evas\\u00e3o', 'evadir', 'gradua\\u00e7\\u00e3o', 'engenharia', 'desligamento', 'ufgd', 'campus', 'universit\\u00e1rio', 'abandono', 'motiva\\u00e7\\u00e3o']\"]]"};
+        new ITable(table, dt_args);
+    });
+</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+<div id="termos-mais-relevantes" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-termos-mais-relevantes">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 20fr) minmax(3em, 80fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<strong>Termos mais relevantes por tópico</strong>
+<ul>
+<li>Os valores são o cTF-IDF para cada termo no respectivo tópico.</li>
+<li>Algumas palavras podem aparecer diferentes da gráfia usual devido ao processo de lematização utilizado durante o pré-processamento dos textos.</li>
+</ul>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div><div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<iframe src="barchart_profiap.html" width="100%" height="90%" style="border: none;">
+</iframe>
+</div>
+</div>
+</div>
+<div id="distribuição-temporal" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-distribuição-temporal">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<iframe src="topics_over_time.html" width="80%" height="100%" style="border: none;">
+</iframe>
+</div>
+</div>
+<div id="metodologia" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-metodologia">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<strong>METODOLOGIA</strong>
+<p>Todos os procedimentos foram implementados em Python 3.10 e executados em um computador com processador Intel i5 (13ª geração), 16 GB RAM e placa NVIDIA RTX 3050. O código-fonte e todos os artefatos de reprodutibilidade estão disponíveis em https://github.com/souza-td/Profiap_abstracts_BERTopic_modeling. Para garantir resultados determinísticos, o gerador pseudo-aleatório foi fixado em seed = 42.</p>
+<strong>Construção do corpus</strong>
+<p>Recuperamos, pela interface de dados abertos da Plataforma Sucupira/CAPES, todas as dissertações do PROFIAP desde a criação do programa (2014) até o último conjunto de dados disponível (2023) <span class="citation" data-cites="capesDAV2025"><a href="#ref-capesDAV2025" role="doc-biblioref">[1]</a></span>. Os arquivos CSV exportados foram concatenados em um único DataFrame Pandas e filtrados pelo identificador exclusivo do PROFIAP. Embora o período de coleta comece em 2014, não houve defesas naquele ano; os resumos finais abrangem 2015 – 2023. Após a remoção de dois duplicatas exatos, obtivemos 1 258 registros únicos, salvos em CSV para as etapas seguintes. Por se tratarem de dados públicos, não foi necessária aprovação ética adicional.</p>
+<strong>Pré-processamento de texto e geração de embeddings</strong>
+<p>Para capturar nuances sintático-léxicas geramos embeddings densos com paraphrase-multilingual-MiniLM-L12-v2<span class="citation" data-cites="reimers-2019-sentence-bert"><a href="#ref-reimers-2019-sentence-bert" role="doc-biblioref">[2]</a></span> e ibm-granite/granite-embedding-278m-multilingual<span class="citation" data-cites="ibm_granite_embedding_278m_multilingual_2024"><a href="#ref-ibm_granite_embedding_278m_multilingual_2024" role="doc-biblioref">[3]</a></span>. Paralelamente, construímos uma matriz termo-documento esparsa via CountVectorizer configurada para uni- e bigramas (ngram_range = (1, 2)). Termos presentes em mais de 90 % dos documentos foram eliminados (max_df = 0.9) para reduzir ruído sem descartar vocabulário especializado.</p>
+<p>A tokenização e lematização utilizaram o modelo português do SpaCy, com parser sintático e NER desativados. A lista padrão de stopwords foi ampliada com termos de alta frequência no domínio (por exemplo, gestão, público, resultado) e siglas de universidades participantes (UFJF, UFPE, etc.).</p>
+<strong>Definição de Hiperparâmetros</strong>
+<p>Os embeddings foram projetados em um espaço de cinco dimensões via UMAP. Testes preliminares mostraram que valores elevados de n_neighbors comprimiam tópicos distintos em agrupamentos muito amplos; assim, partimos de n_neighbors = 3, n_components = 5 e min_dist = 0.1, parâmetros que privilegiam a estrutura local.</p>
+<p>A calibração dos hiperparâmetros do BERTopic começou pela orientação da própria biblioteca, que atribui ao min_cluster_size (ou min_topic_size) o papel de principal regulador da HDBSCAN, determinando simultaneamente o número e a granularidade dos tópicos. Esse protagonismo foi corroborado pelos resultados de Yan e Zhang, que identificaram correlação monotônica forte entre o coeficiente de silhueta dos clusters e a coerência temática (c_v) e recomendaram maximizar essa coerência ajustando apenas o min_cluster_size <span class="citation" data-cites="yan2023optimized"><a href="#ref-yan2023optimized" role="doc-biblioref">[4]</a></span> <span class="citation" data-cites="grootendorst2025bertopic"><a href="#ref-grootendorst2025bertopic" role="doc-biblioref">[5]</a></span>.</p>
+<p>Com base nessas evidências, empregamos um procedimento em duas fases. Na exploração inicial, variamos n_neighbors de 3 a 13 (passo 2) e min_cluster_size de 10 a 50 (passo 5). Essa varredura revelou que valores de min_cluster_size iguais ou superiores a 25 reduziam o corpus a apenas dois tópicos—um resultado incompatível com a heterogeneidade esperada. Na fase de refinamento concentramos o intervalo em n_neighbors de 3 a 14 e min_cluster_size de 10 a 24, usando passo 1.</p>
+<p>Para cada combinação executamos o pipeline completo e calculamos c_v, c_npmi, u_mass e diversity em dois espaços de embeddings: o modelo multilíngue paraphrase-MiniLM recomendado na documentação e o ibm-granite. Selecionamos apenas modelos que gerassem pelo menos cinco tópicos (em consonância com a variabilidade temática indicada por <span class="citation" data-cites="de2024analise"><a href="#ref-de2024analise" role="doc-biblioref">[6]</a></span>), que tivessem c_v no quartil superior e apresentassem diversity &gt; 0.9; apenas as configurações com embeddings ibm-granite satisfizeram simultaneamente essas exigências, conforme exemplificado em . Entre os quatro finalistas, escolhemos a configuração n_neighbors = 12 e min_cluster_size = 13, que ofereceu o melhor equilíbrio entre diversidade temática e coerência semântica, evitando a concentração excessiva de documentos observada nas demais alternativas. A inspeção qualitativa dos termos-chave e dos três documentos mais representativos de cada tópico confirmou a pertinência desse modelo, que embasa as análises das próximas seções.</p>
+<strong>Representação dos tópicos</strong>
+<p>Foram utilizados dois modelos para as representações finais de tópico o KeyBERT-Inspired, padrão da biblioteca e o Maximal Marginal Relevance (coeficiente de diversidade = 0,3).</p>
+<strong>Visualização de dados e divulgação científica</strong>
+<p>As visualizações gráficas resultantes da modelagem foram geradas utilizando as funcionalidade já presentes na biblioteca Bertopic. Estas foram posteriormente exportadas em formato html e inseridas neste Dashboard, construído utilizando a ferramenta Quarto markdown <span class="citation" data-cites="quarto_dashboard_options_2025"><a href="#ref-quarto_dashboard_options_2025" role="doc-biblioref">[7]</a></span>. O arquivo código e demais recursos utilizados na construção deste Dashboard estão também disponíveis no repositório do projeto.</p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+<div id="referências" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-referências">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<strong>Referências</strong>
+<div id="refs" class="references csl-bib-body html-fill-item html-fill-container" data-entry-spacing="0" role="list">
+<div id="ref-capesDAV2025" class="csl-entry html-fill-item html-fill-container" role="listitem">
+<div class="csl-left-margin html-fill-item html-fill-container">[1] </div><div class="csl-right-inline html-fill-item html-fill-container">Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES) – Diretoria de Avaliação, <span>“<span class="nocase">Dados Abertos CAPES: Avaliação da Pós-Graduação Stricto Sensu</span>.”</span> 2025, [Online]. Available: <a href="https://dadosabertos.capes.gov.br/organization/diretoria-de-avaliacao">https://dadosabertos.capes.gov.br/organization/diretoria-de-avaliacao</a>.</div>
+</div>
+<div id="ref-reimers-2019-sentence-bert" class="csl-entry html-fill-item html-fill-container" role="listitem">
+<div class="csl-left-margin html-fill-item html-fill-container">[2] </div><div class="csl-right-inline html-fill-item html-fill-container">N. Reimers and I. Gurevych, <span>“Sentence-BERT: Sentence embeddings using siamese BERT-networks,”</span> Nov. 2019, [Online]. Available: <a href="http://arxiv.org/abs/1908.10084">http://arxiv.org/abs/1908.10084</a>.</div>
+</div>
+<div id="ref-ibm_granite_embedding_278m_multilingual_2024" class="csl-entry html-fill-item html-fill-container" role="listitem">
+<div class="csl-left-margin html-fill-item html-fill-container">[3] </div><div class="csl-right-inline html-fill-item html-fill-container">IBM Research – Granite Team, <span>“<span>Granite Embedding 278M Multilingual</span>.”</span> Hugging Face, 2024, [Online]. Available: <a href="https://huggingface.co/ibm-granite/granite-embedding-278m-multilingual">https://huggingface.co/ibm-granite/granite-embedding-278m-multilingual</a>.</div>
+</div>
+<div id="ref-yan2023optimized" class="csl-entry html-fill-item html-fill-container" role="listitem">
+<div class="csl-left-margin html-fill-item html-fill-container">[4] </div><div class="csl-right-inline html-fill-item html-fill-container">H. Yan and Y. Zhang, <span>“An optimized BERTopic framework based on cluster silhouette for improving topic coherence,”</span> in <em>Proceedings of the 4th international conference on artificial intelligence and computer engineering</em>, 2023, pp. 559–566.</div>
+</div>
+<div id="ref-grootendorst2025bertopic" class="csl-entry html-fill-item html-fill-container" role="listitem">
+<div class="csl-left-margin html-fill-item html-fill-container">[5] </div><div class="csl-right-inline html-fill-item html-fill-container">M. Grootendorst, <span>“<span>BERTopic</span>: Open-source topic modeling framework.”</span> <a href="https://maartengr.github.io/BERTopic/" class="uri">https://maartengr.github.io/BERTopic/</a>, 2025.</div>
+</div>
+<div id="ref-de2024analise" class="csl-entry html-fill-item html-fill-container" role="listitem">
+<div class="csl-left-margin html-fill-item html-fill-container">[6] </div><div class="csl-right-inline html-fill-item html-fill-container">L. A. de Deus, C. E. A. Paula, and A. L. de Paiva, <span>“AN<span>Á</span>LISE DAS DISSERTA<span>Ç</span><span>Õ</span>ES DO MESTRADO PROFISSIONAL EM ADMINISTRA<span>Ç</span><span>Ã</span>o p<span>Ú</span>BLICA EM REDE NACIONAL (PROFIAP) DO ESTADO DE MINAS GERAIS,”</span> <em>Perspectivas em Pol<span>ı́</span>ticas P<span>ú</span>blicas</em>, vol. 17, no. 34, pp. 8–34, 2024.</div>
+</div>
+<div id="ref-quarto_dashboard_options_2025" class="csl-entry html-fill-item html-fill-container" role="listitem">
+<div class="csl-left-margin html-fill-item html-fill-container">[7] </div><div class="csl-right-inline html-fill-item html-fill-container">Quarto Development Team, <span>“Dashboard options – quarto.”</span> <a href="https://quarto.org/docs/reference/formats/dashboard.html" class="uri">https://quarto.org/docs/reference/formats/dashboard.html</a>, 2025.</div>
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /container fluid -->
+
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (_event) {
+  if (window.bslib.Card) {
+    window.bslib.Card.initializeAllCards();
+  }
+}); 
+</script>
+  
+
+
+
+</body></html>
